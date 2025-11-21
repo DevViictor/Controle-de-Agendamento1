@@ -28,8 +28,8 @@ consultores = ["" , "ANA" , "ANDERSON" , "AMANDA" , "DAVID" , "DEBORA" , "LENE" 
 with st.form("Cadastro"):
     st.header("🌐 Agendamento de Fibra")
     Loja = st.selectbox("Loja:",lojas)
-    nome = st.selectbox("Nome do Consultor: ",consultores,key="nome")
-    ordem = st.text_input("Número da ordem: ",key="ordem")
+    nome = st.selectbox("Nome do consultor: ",consultores,key="nome")
+    ordem = st.text_input("SDR da fixa: ",key="ordem")
     data = st.date_input("Data do agendamento: " ,key="data")
     hora = st.time_input("Hora de instalação: ",key="hora")
     email = st.text_input("Email do consultor: ",key="email")
