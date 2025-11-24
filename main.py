@@ -28,7 +28,7 @@ consultores = ["" , "ANA" , "ANDERSON" , "AMANDA" , "DAVID" , "DEBORA" , "LENE" 
 emalis =["","anapsantos@telefonica.com","anderson.scosta@telefonica.com",
          "amanda.dalmeida@telefonica.com","debora.sribeiro@telefonica.com",
          "david.brito@telefonica.com","lenilda.silva@telefonica.com",
-         "lorena.rgomes@telefonica.com"]
+         "lorena.rgomes@telefonica.com","marcos.reboucas@telefonica.com"]
 
 emailgl = ["","max.silveira@telefonica.com"]
 
