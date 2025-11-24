@@ -25,15 +25,22 @@ lojas = [" ","LOJA IGUATEMI | BA" , "LOJA IGUATEMI || BA"]
 
 consultores = ["" , "ANA" , "ANDERSON" , "AMANDA" , "DAVID" , "DEBORA" , "LENE" , "LORENA" , "RODRIGO"]
 
+emalis =["","anapsantos@telefonica.com","anderson.scosta@telefonca.com",
+         "amanda.dalmeida@teleefonica.com","debora.sribeiro@telefonica.com",
+         "david.brito@telefonica.com","lenilda.silva@telefonica.com",
+         "lorena.rgomes@telefonica.com"]
+
+emailgl = ["","max.silveira@telefonica.com"]
+
 with st.form("Cadastro"):
     st.header("🌐 Agendamento de Fibra")
     Loja = st.selectbox("Loja:",lojas)
-    nome = st.selectbox("Nome do consultor: ",consultores,key="nome")
-    ordem = st.text_input("SDR FIXA: ",key="ordem")
-    data = st.date_input("Data do agendamento: " ,key="data")
-    hora = st.time_input("Hora de instalação: ",key="hora")
-    email = st.text_input("Email do consultor: ",key="email")
-    
+    nome = st.selectbox("Nome do consultor: ",consultores)
+    ordem = st.text_input("SDR FIXA: ")
+    data = st.date_input("Data do agendamento: ")
+    hora = st.time_input("Hora de instalação: ")
+    email = st.selectbox("Email do consultor: ",emalis)
+
     enviar = st.form_submit_button("Cadastrar")
 
 if enviar:
@@ -45,5 +52,6 @@ if enviar:
         data.strftime("%d/%m/%Y"),   
         hora.strftime("%H:%M"), 
         email,
+        emailcl,
     ])
     st.success("Agendamento realizado com sucesso!")
