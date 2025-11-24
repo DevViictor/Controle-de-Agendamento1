@@ -25,8 +25,8 @@ lojas = [" ","LOJA IGUATEMI | BA" , "LOJA IGUATEMI || BA"]
 
 consultores = ["" , "ANA" , "ANDERSON" , "AMANDA" , "DAVID" , "DEBORA" , "LENE" , "LORENA" , "RODRIGO"]
 
-emalis =["","anapsantos@telefonica.com","anderson.scosta@telefonca.com",
-         "amanda.dalmeida@teleefonica.com","debora.sribeiro@telefonica.com",
+emalis =["","anapsantos@telefonica.com","anderson.scosta@telefonica.com",
+         "amanda.dalmeida@telefonica.com","debora.sribeiro@telefonica.com",
          "david.brito@telefonica.com","lenilda.silva@telefonica.com",
          "lorena.rgomes@telefonica.com"]
 
