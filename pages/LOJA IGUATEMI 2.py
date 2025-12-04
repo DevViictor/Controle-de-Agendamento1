@@ -3,6 +3,13 @@ import gspread
 from google.oauth2.service_account import Credentials
 
 
+if "role" not in st.session_state or st.session_state.role != "loja2":
+    st.error("⚠️ Acesso negado!")
+    st.stop()
+
+st.title("LOJA IGUATEMI || BA")
+
+
 gcp_info = st.secrets["gcp"]
 planilha_chave = st.secrets["planilha"]["chave"]
 
@@ -17,20 +24,17 @@ creds = Credentials.from_service_account_info(
 
 client = gspread.authorize(creds)
 
-pagina = client.open_by_key(planilha_chave).worksheet("dados")
+pagina = client.open_by_key(planilha_chave).worksheet("iguatemi2")
 
 st.set_page_config(page_title= "Acompanhamento das Fibras" , page_icon = "🌐" , layout= "wide")
 
-lojas = [" ","LOJA IGUATEMI | BA" , "LOJA IGUATEMI || BA"]
+lojas = ["LOJA IGUATEMI || BA"]
 
-consultores = ["" , "ANA" , "ANDERSON" , "AMANDA" , "DAVID" , "DEBORA" , "LENE" , "LORENA" , "RODRIGO"]
+consultores = ["teste"]
 
-emalis =["","anapsantos@telefonica.com","anderson.scosta@telefonica.com",
-         "amanda.dalmeida@telefonica.com","debora.sribeiro@telefonica.com",
-         "david.brito@telefonica.com","lenilda.silva@telefonica.com",
-         "lorena.rgomes@telefonica.com","marcos.reboucas@telefonica.com"]
+emalis =["teste"]
 
-emailgl = ["","max.silveira@telefonica.com"]
+emailgl = [""]
 
 with st.form("Cadastro"):
     st.header("🌐 Agendamento da Fibra")
